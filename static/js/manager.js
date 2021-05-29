@@ -35,4 +35,26 @@ $(function () {
         toggleMode()
         updateOutput()
     })
+
+    BODY.on('click', '#increase', function(){
+        increaseOffset()
+        createCipher($('#offset').val())
+        fillCipherKey()
+        updateOutput()
+    })
+
+    BODY.on('click', '#decrease', function(){
+        decreaseOffset()
+        createCipher($('#offset').val())
+        fillCipherKey()
+        updateOutput()
+    })
+
+    BODY.on('click', '#clear', function() {
+        reset()
+        setKeyword($('#keyword').val())
+        createCipher($('#offset').val())
+        fillCipherKey()
+        updateOutput()
+    })
 })

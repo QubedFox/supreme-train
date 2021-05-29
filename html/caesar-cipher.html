@@ -83,12 +83,17 @@
                 <div class="row">
                     <div class="col-5 mt-3">
                         <label for="offset-input" class="form-label">Offset</label>
-                        <div id="offset-input">
+                        <div id="offset-input" class="input-group">
+                            <button type="button" class="btn btn-primary" id="increase"><i class="fas fa-plus"></i></button>
                             <input type="number" class="form-control" id="offset" min="0" max="25" step="1" value="0">
+                            <button type="button" class="btn btn-primary" id="decrease"><i class="fas fa-minus"></i></button>
                         </div>
                     </div>
                     <div class="col mt-5">
                         <button class="form-control btn btn-primary" id="mode" value="encrypt">Encrypt</button>
+                    </div>
+                    <div class="col mt-5">
+                        <button class="form-control btn btn-danger" id="clear">Reset</button>
                     </div>
                     <div class="col-5 mt-3">
                         <label for="keyword" class="form-label">Keyword</label>

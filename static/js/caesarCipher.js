@@ -32,17 +32,18 @@ function initialiseKeys(){
 function createCipher(offset){
     this.initialiseKeys()
     if (offset == "") { offset = 0 }
-    console.log(offset)
     var pos = 26 - parseInt(offset);
 
     if (pos == 26) { pos = 0 }
 
     for (i = 0; i < keyword.length; i++){
-        if (!cipher.includes(keyword.charCodeAt(i))) {
-            cipher[pos] = keyword.charCodeAt(i)
-            pos = pos + 1
-            if (pos > 25){
-                pos = pos - 26
+        if (plain.includes(keyword.charCodeAt(i))) {
+            if (!cipher.includes(keyword.charCodeAt(i))) {
+                cipher[pos] = keyword.charCodeAt(i)
+                pos = pos + 1
+                if (pos > 25){
+                    pos = pos - 26
+                }
             }
         }
     }

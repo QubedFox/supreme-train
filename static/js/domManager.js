@@ -46,3 +46,34 @@ function toggleMode() {
         modeToggle()
     }
 }
+
+function increaseOffset() {
+    if ( parseInt($('#offset').val()) + 1  > -1 && parseInt($('#offset').val()) + 1  < 26) {
+        editOffset(parseInt($('#offset').val()) + 1 )
+    }
+    else{
+        editOffset(25)
+    }
+}
+
+function decreaseOffset() {
+    if ($('#offset').val() - 1 != -1){
+        editOffset($('#offset').val() - 1 )
+    }
+    else{
+        editOffset(0)
+    }
+}
+
+function editOffset(value) {
+    $('#offset').val(parseInt(value))
+}
+
+function reset(){
+    editOffset(0)
+    editKeyword("")
+}
+
+function editKeyword(string) {
+    $('#keyword').val(string)
+}
